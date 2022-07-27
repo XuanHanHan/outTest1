@@ -26,7 +26,6 @@
     <java.module.name>org.optaplanner.examples</java.module.name>
     <maven.compiler.release>11</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    
   </properties>
 
   <repositories>
@@ -148,6 +147,11 @@
     <dependency><!-- Most examples use the XStream integration -->
       <groupId>org.optaplanner</groupId>
       <artifactId>optaplanner-persistence-xstream</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.optaplanner</groupId>
+      <artifactId>optaplanner-persistence-jsonb</artifactId>
+      <version>8.24.0.Final</version>
     </dependency>
     <dependency>
       <groupId>org.optaplanner</groupId>
