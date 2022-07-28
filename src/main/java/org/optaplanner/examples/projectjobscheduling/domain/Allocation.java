@@ -21,17 +21,17 @@ public class Allocation extends AbstractPersistable {
 
     private Job job;
 
-    private Allocation sourceAllocation;
-    private Allocation sinkAllocation;
-    private List<Allocation> predecessorAllocationList;
-    private List<Allocation> successorAllocationList;
+    private Allocation sourceAllocation;//资源分配
+    private Allocation sinkAllocation;//重要程度分配
+    private List<Allocation> predecessorAllocationList;//上一代分配表
+    private List<Allocation> successorAllocationList;//下一代分配表
 
     // Planning variables: changes during planning, between score calculations.
-    private ExecutionMode executionMode;
-    private Integer delay; // In days
+    private ExecutionMode executionMode;//执行模式
+    private Integer delay; // In days 需要的天数
 
     // Shadow variables
-    private Integer predecessorsDoneDate;
+    private Integer predecessorsDoneDate;//上一代完成日期
 
     public Job getJob() {
         return job;

@@ -1,9 +1,10 @@
 package org.optaplanner.examples.projectjobscheduling.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import org.optaplanner.examples.projectjobscheduling.domain.resource.Resource;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-
 @XStreamAlias("PjsResourceRequirement")
 public class ResourceRequirement extends AbstractPersistable {
 
@@ -39,6 +40,7 @@ public class ResourceRequirement extends AbstractPersistable {
     // Complex methods
     // ************************************************************************
 
+    @JsonIgnore
     public boolean isResourceRenewable() {
         return resource.isRenewable();
     }

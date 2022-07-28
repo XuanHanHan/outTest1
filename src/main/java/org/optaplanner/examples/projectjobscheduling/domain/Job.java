@@ -2,8 +2,8 @@ package org.optaplanner.examples.projectjobscheduling.domain;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonRootName;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-
 @XStreamAlias("PjsJob")
 public class Job extends AbstractPersistable {
 

@@ -2,10 +2,11 @@ package org.optaplanner.examples.projectjobscheduling.domain;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import org.optaplanner.examples.projectjobscheduling.domain.resource.LocalResource;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-
 @XStreamAlias("PjsProject")
 public class Project extends AbstractPersistable {
 
@@ -55,6 +56,7 @@ public class Project extends AbstractPersistable {
         return releaseDate + criticalPathDuration;
     }
 
+    @JsonIgnore
     public String getLabel() {
         return "Project " + id;
     }

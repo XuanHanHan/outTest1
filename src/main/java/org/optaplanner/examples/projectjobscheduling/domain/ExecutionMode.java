@@ -2,8 +2,9 @@ package org.optaplanner.examples.projectjobscheduling.domain;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonRootName;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-
+@JsonRootName(value = "PjsExecutionMode")
 @XStreamAlias("PjsExecutionMode")
 public class ExecutionMode extends AbstractPersistable {
 

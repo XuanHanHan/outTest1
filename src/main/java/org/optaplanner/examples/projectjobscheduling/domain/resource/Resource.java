@@ -1,10 +1,11 @@
 package org.optaplanner.examples.projectjobscheduling.domain.resource;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import org.optaplanner.examples.projectjobscheduling.domain.AbstractPersistable;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamInclude;
-
 @XStreamAlias("PjsResource")
 @XStreamInclude({
         GlobalResource.class,
@@ -25,7 +26,7 @@ public abstract class Resource extends AbstractPersistable {
     // ************************************************************************
     // Complex methods
     // ************************************************************************
-
+    @JsonIgnore
     public abstract boolean isRenewable();
 
 }

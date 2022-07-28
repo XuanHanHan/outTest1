@@ -150,8 +150,8 @@
     </dependency>
     <dependency>
       <groupId>org.optaplanner</groupId>
-      <artifactId>optaplanner-persistence-jsonb</artifactId>
-      <version>8.24.0.Final</version>
+      <artifactId>optaplanner-persistence-jackson</artifactId>
+      <version>8.24.1.Final</version>
     </dependency>
     <dependency>
       <groupId>org.optaplanner</groupId>

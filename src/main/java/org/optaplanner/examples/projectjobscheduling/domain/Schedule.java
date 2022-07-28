@@ -2,6 +2,8 @@ package org.optaplanner.examples.projectjobscheduling.domain;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.JacksonStdImpl;
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningScore;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
@@ -16,7 +18,6 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
 @PlanningSolution
 @XStreamAlias("PjsSchedule")
 public class Schedule extends AbstractPersistable {
-
     private List<Project> projectList;
     private List<Job> jobList;
     private List<ExecutionMode> executionModeList;
@@ -24,7 +25,7 @@ public class Schedule extends AbstractPersistable {
     private List<ResourceRequirement> resourceRequirementList;
 
     private List<Allocation> allocationList;
-
+    @JsonIgnore
     @XStreamConverter(HardMediumSoftScoreXStreamConverter.class)
     private HardMediumSoftScore score;
 
