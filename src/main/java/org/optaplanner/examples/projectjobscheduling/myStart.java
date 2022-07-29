@@ -35,7 +35,6 @@ public class myStart {
 
         File file = new File("data\\projectjobscheduling\\solved\\A-11.xml");
         projectJobSchedulingXmlSolutionFileIO.write(result, file);
-
     }
 
 

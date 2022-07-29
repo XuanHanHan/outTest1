@@ -1,5 +1,6 @@
 package org.optaplanner.examples.projectjobscheduling.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.valuerange.CountableValueRange;
@@ -14,7 +15,6 @@ import org.optaplanner.examples.projectjobscheduling.domain.solver.NotSourceOrSi
 import org.optaplanner.examples.projectjobscheduling.domain.solver.PredecessorsDoneDateUpdatingVariableListener;
 
 import java.util.List;
-
 @PlanningEntity(pinningFilter = NotSourceOrSinkAllocationFilter.class)
 @XStreamAlias("PjsAllocation")
 public class Allocation extends AbstractPersistable {

@@ -2,8 +2,7 @@ package org.optaplanner.examples.projectjobscheduling.domain;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonRootName;
+import com.fasterxml.jackson.annotation.*;
 import org.optaplanner.examples.projectjobscheduling.domain.resource.LocalResource;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -12,7 +11,7 @@ public class Project extends AbstractPersistable {
 
     private int releaseDate;
     private int criticalPathDuration;
-
+    @JsonBackReference
     private List<LocalResource> localResourceList;
     private List<Job> jobList;
 
@@ -51,7 +50,7 @@ public class Project extends AbstractPersistable {
     // ************************************************************************
     // Complex methods
     // ************************************************************************
-
+    @JsonIgnore
     public int getCriticalPathEndDate() {
         return releaseDate + criticalPathDuration;
     }
